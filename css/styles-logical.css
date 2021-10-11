@@ -204,6 +204,10 @@ blockquote span {
     margin-block-end: 40px;
 }
 
+.section-content ul, .section-content ol {
+    lis
+}
+
 /* -------- SLIDER -------- */
 
 .video-slider-container {
@@ -289,6 +293,26 @@ blockquote span {
 
 .form input[type="submit"]:hover {
     cursor: pointer;
+}
+
+/* -------- FOOTER -------- */
+
+footer {
+    background: white;
+    block-size: 174px;
+    margin-block-start: 80px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+footer p {
+    padding-block-start: 48px;
+    margin: 0;
+    font-size: 32px;
+}
+
+footer img {
+    margin-block-start: 16px;
 }
 
 /* -------- MEDIA QUERIES -------- */

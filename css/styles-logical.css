@@ -65,20 +65,6 @@ header a:hover {
     color: var(--color-tabladecontenidos-hover);
 }
 
-
-/* -------- ICONO DE SUMMARY -------- */
-.header details > summary {
-    list-style-type: none;
-}
-
-details > summary::before {
-    content: '> ';
-}
-
-details[open] > summary::before {
-    content: 'v ';
-}
-
 /* -------- ESTRUCTURA DE CONTENIDO PRINCIPAL -------- */
 .wrapper {
     /* max-width: 636px; */
@@ -344,4 +330,18 @@ blockquote span {
     .main-content-wrapper h1 {
         font-size: 3.75em;
         margin-block: 64px 16px;
+    }
+
+        /* -------- ICONO DE SUMMARY -------- */
+    .header details > summary {
+        list-style-type: none;
+    }
+
+    details > summary::before {
+        content: '> ';
+    }
+
+    details[open] > summary::before {
+        content: 'v ';
+    }
 }

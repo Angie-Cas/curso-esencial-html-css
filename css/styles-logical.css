@@ -299,7 +299,7 @@ blockquote span {
 
 footer {
     background: white;
-    block-size: 174px;
+    block-size: 250px;
     margin-block-start: 80px;
     text-align: center;
     box-sizing: border-box;
@@ -308,7 +308,7 @@ footer {
 footer p {
     padding-block-start: 48px;
     margin: 0;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 footer img {
@@ -367,5 +367,25 @@ footer img {
 
     details[open] > summary::before {
         content: 'v ';
+    }
+
+    /* -------- FOOTER -------- */
+
+    footer {
+        background: white;
+        block-size: 200px;
+        margin-block-start: 80px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    footer p {
+        padding-block-start: 48px;
+        margin: 0;
+        font-size: 32px;
+    }
+
+    footer img {
+        margin-block-start: 16px;
     }
 }

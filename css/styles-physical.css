@@ -164,3 +164,8 @@ header ol li {
 header summary {
     line-height: 24px;
 }
+
+footer {
+    background: white;
+    block-size: 174px;
+}

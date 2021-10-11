@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* -------- VARIABLES -------- */
+:root {
+    --color-fondo: #212121;
+    --color-titulos: white;
+    --color-texto: #A5A3A5;
+    --color-cita-fondo: #3A3539;
+    --color-cita-texto: white;
+    --color-separador: #616161;
+    --color-codigo-fondo: #3A3539;
+    --color-codigo-texto: white;
+    --color-tabladecontenidos-hover: #afaeaf;
+    --color--hightlight-link: #157EFB;
+    --fuente-lightmode: 'Roboto', sans-serif;
+    --fuente-darkmode: 'Nunito', sans-serif;
+    --header-lightmode: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent), url(../img/patron-1.png);
+    --header-darkmode: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    /* margin: 0; */
+    margin-block: 0;
+    margin-inline: 0;
+    font-family: var(--fuente-darkmode);
+    font-size: 16px;
+    background: var(--color-fondo);
+}
+
+
+/* -------- HEADER -------- */
+.header-imagen {
+    block-size: 100px;
+    background: var(--header-darkmode);
+}
+
+/* -------- TABLA DE CONTENIDOS -------- */
+
+header {
+    margin-block-start: 20px;
+    margin-inline: 20px;
+}
+
+header ol li {
+    /* margin-bottom: 16px; */
+    margin-block-end: 16px;
+}
+
+header summary {
+    line-height: 24px;
+    color: var(--color-titulos);
+    font-weight: bold;
+}
+
+header a {
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--color-tabladecontenidos-hover);
+}
+
+
+/* -------- ICONO DE SUMMARY -------- */
+.header details > summary {
+    list-style-type: none;
+}
+
+details > summary::before {
+    content: '> ';
+}
+
+details[open] > summary::before {
+    content: 'v ';
+}
+
+/* -------- ESTRUCTURA DE CONTENIDO PRINCIPAL -------- */
+.wrapper {
+    /* max-width: 636px; */
+    max-inline-size: 636px;
+    margin: auto;
+}
+
+.main-content-wrapper {
+    color: var(--color-texto);
+    padding-inline: 20px;
+}
+
+
+/* -------- TITULOS -------- */
+.main-content-wrapper h1 {
+    font-size: 2.5em;
+    /* margin: 64px 0px 16px; <-- FISICO */
+    margin-block: 30px 16px;
+    font-weight: bold;
+    color: var(--color-titulos);
+}
+
+.main-content-wrapper h2 {
+    font-size: 2em;
+    /* margin: 64px 0px 40px; */
+    margin-block: 40px;
+    font-weight: bold;
+    color: var(--color-titulos);
+}
+
+.section-content h2:first-of-type {
+    margin-block: 40px 0px;
+}
+
+.main-content-wrapper h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+    /* margin: 16px 0px 20px; */
+    margin-block: 16px 16px;
+    /* padding-bottom: 4px; */
+    padding-inline-end: 4px;
+    background: var(--color-fondo);
+    position: relative;
+    color: var(--color-titulos);
+    counter-increment: titleList;
+    position: sticky;
+    /* top: 0px; */
+    inset-block-start: 0;
+}
+
+/* -------- NUMERACION DE TITULOS -------- */
+
+.main-content-wrapper h3::before {
+    content: counter(titleList) ". ";
+}
+
+/* -------- LINEA DEBAJO DE TITULOS -------- */
+/* .main-content-wrapper h3::after {
+    content: '';
+    display: inline-block;
+    width: 64px;
+    height: 4px;
+    background: var(--gray30);
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+} */
+
+/* -------- IMAGENES -------- */
+.section-content img {
+    /* margin-top: 24px; */
+    margin-block: 40px 0px;
+    /* max-width: 100%; */
+    max-inline-size: 100%;
+}
+
+/* -------- BLOQUE DE CODIGO -------- */
+pre {
+    background: var(--color-codigo-fondo);
+    padding: 40px;
+    /* margin-top: 15px; */
+    margin-block-start: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-codigo-texto);
+    white-space:pre-line;
+}
+
+/* -------- CITAS -------- */
+.section-content blockquote {
+    /* margin: 32px 0px; */
+    margin-block: 32px;
+    margin-inline: 0;
+    padding: 24px;
+    font-size: 1.5em;
+    color: var(--color-cita-texto);
+    line-height: 32px;
+    background: var(--color-cita-fondo);
+}
+
+.section-content blockquote p {
+    margin-inline: 0;
+    margin-block: 0;
+}
+
+/* -------- SEPARADOR -------- */
+hr {
+    /* margin: 64px 0px; */
+    border-color: var(--color-separador);
+}
+
+.section-content + hr {
+    display: none;
+}
+
+blockquote span {
+    color: var(--gray10);
+}
+
+/* -------- LISTAS EN CONTENIDO PRINCIPAL -------- */
+
+.section-content ul {
+    /* margin-bottom: 40px; */
+    margin-block-end: 40px;
+}
+.section-content ul li {
+    /* margin-bottom: 16px; */
+    margin-block-end: 16px;
+}
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+.section-content ol {
+    /* margin-bottom: 40px; */
+    margin-block-end: 40px;
+}
+
+/* -------- SLIDER -------- */
+
+.video-slider-container {
+    white-space: nowrap;
+    overflow: auto;
+    scroll-behavior: smooth;
+    font-size: 0;
+}
+
+.video-slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.video-slider-page {
+    display: inline-block;
+    margin: 0;
+    inline-size: 100%;
+}
+
+.video-slider-page iframe {
+    inline-size: 100%;
+}
+
+.slider-bullet-container {
+    margin-block-start: 16px;
+    text-align: center;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 16px;
+    block-size: 16px;
+    background: #42424233;
+    border-radius: 50%;
+    margin-inline-end: 8px;
+    transition: all 0.4s;
+}
+
+.slider-bullet:hover {
+    background: white;
+}
+
+/* -------- INFORMACION ADICIONAL -------- */
+
+.informacion-adicional {
+    padding-inline: 20px;
+    color: var(--color-titulos);
+    /* margin-top: 84px; */
+    margin-block-start: 51px;
+}
+
+.informacion-adicional h3 {
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-block-start: 40px;
+}
+
+.informacion-adicional a {
+    color: var(--color--hightlight-link);
+}
+
+.form input {
+    inline-size: 100%;
+    background: var(--color-fondo);
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-block-end: 24px;
+    font-size: 16px;
+}
+
+.form input::placeholder {
+    color: var(--color-texto);
+}
+
+.form input[type="submit"] {
+    background: var(--color--hightlight-link);
+    font-weight: 700;
+    border: none;
+}
+
+.form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+@media (min-width: 1125px) {
+     /* -------- BANNER -------- */
+    .header-imagen {
+        block-size: 350px;
+    }
+    
+    /* -------- TABLA DE CONTENIDOS -------- */
+    .header {
+        position: sticky;
+        /* top: 0px; */
+        inset-block-start: 0;
+    }
+    
+    .header-content-wrapper {
+        position: relative;
+    }
+    
+    header {
+        position: absolute;
+        /* Estas propiedades no funcionaban correctamente porque el padre de absolute era sticky y no relativo. */
+        /* top: 64px; */
+        /* inset-block-start: 64px;
+        /* left: 191px; */
+        /* inset-inline-start: 191px; */
+        /* width: 208px; */
+        /* inline-size: 208px; */ 
+        inline-size: 208px;
+        inset-inline-start: -208px;
+        inset-block-start: 64px;
+        margin-block-start: 0;
+        margin-inline: 0;
+    }
+
+    /* -------- TTITULOS -------- */
+    .main-content-wrapper h1 {
+        font-size: 3.75em;
+        margin-block: 64px 16px;
+}

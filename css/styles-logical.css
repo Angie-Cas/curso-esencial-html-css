@@ -103,7 +103,7 @@ header a:hover {
     font-size: 1.5em;
     font-weight: normal;
     /* margin: 16px 0px 20px; */
-    margin-block: 16px 16px;
+    margin-block: 40px 16px;
     /* padding-bottom: 4px; */
     padding-inline-end: 4px;
     background: var(--color-fondo);
@@ -117,7 +117,7 @@ header a:hover {
 
 /* -------- NUMERACION DE TITULOS -------- */
 
-.main-content-wrapper h3::before {
+.main-content-wrapper section:first-of-type h3::before {
     content: counter(titleList) ". ";
 }
 
@@ -156,7 +156,7 @@ pre {
 /* -------- CITAS -------- */
 .section-content blockquote {
     /* margin: 32px 0px; */
-    margin-block: 32px;
+    margin-block: 80px 63px;
     margin-inline: 0;
     padding: 24px;
     font-size: 1.5em;
